@@ -1,0 +1,26 @@
+package Chapter4;
+
+import java.util.Scanner;
+
+public class Exercise1 {
+    public static void main(String[] args) {
+        int sum1;
+        int sum2;
+        int x = 1;
+        do {
+            try {
+
+                Scanner input = new Scanner(System.in);
+                System.out.println("Enter a number");
+                sum1 = input.nextInt();
+                System.out.println("Enter a second number");
+                sum2 = input.nextInt();
+                System.out.println("Sum is : " + (sum1 + sum2));
+                x = 2;
+            } catch (Exception e) {
+                System.out.println("please enter an Integer, try again");
+            }
+        } while (x == 1);
+    }
+
+}
