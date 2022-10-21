@@ -1,0 +1,28 @@
+package Chapter4;
+
+import java.util.InputMismatchException;
+import java.util.Scanner;
+
+public class Exercise2 {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        double [] array = getArray();
+
+        System.out.println("Enter index of array");
+        try{
+            System.out.println("The Value of array is: "+ array[input.nextInt()]);
+        }
+        catch(ArrayIndexOutOfBoundsException e){
+            System.out.println("Out of Bounds. ");
+        }catch(InputMismatchException e){
+            System.out.println("Please enter a digit");
+        }
+    }
+    public static double[] getArray(){
+        double[] array = new double[50];
+        for(int i = 0;i < array.length; i++){
+            array[i] =(double)(Math.random()*50) + 1;
+        }
+        return array;
+    }
+}
